@@ -31,7 +31,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
 
         //3.获得请求头的令牌
-        String jwt = response.getHeader("token");
+        String jwt = request.getHeader("token");
 
         //4.判断令牌是否存在，如果不存在，返回错误并回到登录界面
         if (!StringUtils.hasLength(jwt)){
